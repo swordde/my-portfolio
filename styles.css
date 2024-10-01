@@ -25,6 +25,7 @@ body{
 header{
     margin-top: 20px;
     position: fixed;
+    margin-top: 0px;
     top: 0;
     left: 0;
     width: 100%;
@@ -38,6 +39,7 @@ header{
 }
 
 .logo{
+    top: 0;
     font-size: 3rem;
     color: #51b0ec;
     font-weight: 800;
@@ -48,10 +50,35 @@ header{
 .logo:hover{
     transform: scale(1.1);
 }
+nav ul{
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+}
 
+.side{
+    position: fixed;
+    top: 0; 
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    background-color: rgba(128, 149, 194, 0);
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0 10px rgba(0,0,0,0.2);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+}
+.side li{
+    width: 100%;
+    
+}
 nav a{
     font-size: 1.8rem;
-    color: rgb(255, 255, 255);
+    color: rgb(81, 142, 241);
     margin-left: 4rem;
     font-weight: 500;
     transition: 0.3s ease;
@@ -63,19 +90,29 @@ nav a.active{
     color: #51b0ec;
     border-bottom: 3px solid  #51b0ec;
 }
+.menu{
+display: none;
+}
+@media (max-width:800px) {
+    .hideOnMobile{
+        display: none;
+    }
+    .menu{
+        display: block;
+    }
 
-@media(max-width:995px){
+
+
     nav{
         position: absolute;
-        display: none;
         top: 0;
         right: 0;
-        width: 40%;
-        border-left: 3px solid  #ec5151;
-        border-bottom: 3px solid  #ec5151;
+        border-left: 3px solid  #13272f6c;
+        border-bottom: 3px solid  #13272f6c;
         border-bottom-left-radius: 2rem;
+    
         padding: 1rem solid;
-        background-color: #161616;
+        background-color: #161616a7;
         border-top: 0.1rem solid rgba(0,0,0,0.1);
     }
 
@@ -212,10 +249,10 @@ span{
     content: "";
     background-color: black;
     position: absolute;
-    width: calc(100% + 8px);
+    width: 230;
     height: 100%;
-    border-left: 3px solid  #51b0ec;
-    right: -8;
+    border-left: 3px solid  #f1c342;
+    left: -16;
     animation: cursor 0.6s infinite;
    
 }
@@ -228,10 +265,10 @@ span{
 
 @keyframes words{
     0%, 20%{
-        content: "Web Developer";
+        content: "Web_Developer";
     }
     21%, 40%{
-        content: "Cosmology Enthusiast";
+        content: "Cosmology_Enthusiast";
     }
     41%, 60%{
         content: "Gamer";
@@ -240,17 +277,17 @@ span{
         content: "Youtuber";
     }
     81%, 100%{
-        content: "Java Develper";
+        content: "Java_Develper";
     }
 }
 
-@media (max-width: 0px){
+@media (max-width:100px){
     .home{
         gap: 4rem;
     }
 }
 
-@media(max-width:995px){
+@media(max-width:800px){
     .home{
         flex-direction: column;
         margin: 5rem 4rem;
@@ -258,10 +295,12 @@ span{
 
     .home .home-content h3{
         font-size: 2.5rem;
+        width: 25ch;
     }
 
     .home-content h1{
         font-size: 5rem;
+  
     }
 
     .home-img img{
@@ -270,7 +309,7 @@ span{
     }
 }
 
-/*.Services{
+.Services{
     
     display: inline-flex;
 
@@ -278,7 +317,7 @@ span{
 
 .Services a{
     
-    display:flex;
+    display:inline-flex;
     gap: 1;
     justify-content: center;
     align-items: center;

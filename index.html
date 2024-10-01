@@ -12,13 +12,26 @@
     <header>
         <a href="#" class="logo">Mithun</a>
 
-        <nav>
-            <a href="#" class="active"> Home</a>
-            <a href="#" >Services</a>
-            <a href="#" >Skills</a>
-            <a href="#" >Education</a>
-            <a href="#" >Experience</a>
-            <a href="#" >Contact</a>
+        <nav>      
+             <ul class="side">
+                <li><a href="#" class="active"> Home</a></li>
+                <li> <a href="#" >Services</a></li>
+                <li> <a href="#" >Skills</a></li>
+                <li><a href="#" >Education</a></li>
+                <li><a href="#" >Experience</a></li>
+                <li> <a href="#" >Contact</a></li>
+            <li onclick=hideside()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+           
+        </ul>
+            <ul >
+                <li class="hideOnMobile"><a href="#" class="active"> Home</a></li>
+                <li class="hideOnMobile"> <a href="#" >Services</a></li>
+                <li class="hideOnMobile"> <a href="#" >Skills</a></li>
+                <li class="hideOnMobile"><a href="#" >Education</a></li>
+                <li class="hideOnMobile"><a href="#" >Experience</a></li>
+                <li class="hideOnMobile"> <a href="#" >Contact</a></li>
+           <li class="menu"onclick=showside()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="blue"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+        </ul>
         </nav>
     </header>
     <section class="home">
@@ -29,6 +42,7 @@
         <div class="home-content">
             <h1>Hi, It's <span>Mithun</span></h1>
             <h3 class="typing-text">I'm a <span></span></h3>
+
             <p>A passionate cosmology enthusiast, dedicated coder, and avid gamer. I love exploring the mysteries of the universe, crafting elegant code, and diving into immersive gaming worlds. My journey in web development and programming has been fueled by curiosity and a drive to create impactful digital experiences. Welcome to my portfolio, where science, technology, and creativity converge!</p>
             <div class="social-icons">
                 <a href="https://www.linkedin.com/in/mithun-m-337000301?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fa-brands fa-linkedin"></i></a>
@@ -44,11 +58,22 @@
     </section>
     <section class="Services">
 
-        <!---<div class="Service">
+        <div class="Service">
             <a href="#"><i class="fa-brands fa-java"></i></a>
             <a href="#"><i class="fa-brands fa-python"></i></a>
             <a href="#"><i class="fa-brands fa-c"></i></a>
         </div>
     </section>
+    <script>
+        function showside(){
+            const side=document.querySelector(' .side')
+            side.style.display='flex'
+        }   
+        function hideside()
+        {
+            const side=document.querySelector(' .side')
+            side.style.display='none'
+        }
+    </script>
 </body>
 </html>
