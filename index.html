@@ -14,9 +14,9 @@
 
         <nav>      
              <ul class="side">
-                <li onclick=hideside()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
-                <li><a href="#" class="active"> Home</a></li>
-                <li> <a href="#" >Services</a></li>
+                <li onclick=hideside()><a><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+                <li><a href="#home"> Home</a></li>
+                <li> <a href="#Service" >Services</a></li>
                 <li> <a href="#" >Skills</a></li>
                 <li><a href="#" >Education</a></li>
                 <li><a href="#" >Experience</a></li>
@@ -31,11 +31,12 @@
                 <li class="hideOnMobile"><a href="#" >Education</a></li>
                 <li class="hideOnMobile"><a href="#" >Experience</a></li>
                 <li class="hideOnMobile"> <a href="#" >Contact</a></li>
-           <li class="menu"onclick=showside()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="blue"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+           <li class="menu"onclick=showside()><a><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="blue"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
         </ul>
         </nav>
     </header>
     <section class="home">
+       
         <div class="home-img">
             <img src="mithun-removebg-preview.png" alt="">
             
@@ -58,12 +59,20 @@
        
     </section>
     <section class="Services">
+        <h4 id="Service">Services</h4>
 
+        
         <div class="Service">
-            <a href="#"><i class="fa-brands fa-java"></i></a>
-            <a href="#"><i class="fa-brands fa-python"></i></a>
-            <a href="#"><i class="fa-brands fa-c"></i></a>
+            <a href="https://en.wikipedia.org/wiki/Java_(programming_language)"><i class="fa-brands fa-java"></i></a>
+            <div class="hover-content">This appears on hover!</div>
+            <a href="https://en.wikipedia.org/wiki/Python_(programming_language)"><i class="fa-brands fa-python"></i></a>
+            <div class="hover-content">This content appears on hover!</div>
+            <a href="https://en.wikipedia.org/wiki/C_(programming_language)"><i class="fa-brands fa-c"></i></a>
+            <div class="hover-content">This content appears on hover!</div>
         </div>
+        
+
+        
     </section>
     <script>
         function showside(){
